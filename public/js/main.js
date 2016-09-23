@@ -35,6 +35,7 @@ angular.module('PassApp', ['ui.router'])
 	var exam = { data: "Here comes order!" };
 
 	$scope.orgName;
+	$scope.data = {};
 
 	$scope.index = "";
 	$scope.grade = "";
@@ -70,7 +71,7 @@ angular.module('PassApp', ['ui.router'])
 	}
 
 	$scope.findResultById = function(){
-		ApiService.getResultById(1, 1, 1).then(function(success){
+		ApiService.getResultById(1, 1, $scope.data.index).then(function(success){
 			console.log(success);
 		}).catch(function(error){
 			console.log(error);

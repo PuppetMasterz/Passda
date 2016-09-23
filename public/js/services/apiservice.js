@@ -21,7 +21,7 @@ angular.module('PassApp')
 	}
 
 	o.getResultById = function(instituteId, examId, indexNo){
-		var params = '/' + instituteId + '/' + examId + '/' + indexNo;
+		var params = '/result/' + instituteId + '/' + examId + '/' + indexNo;
 		var deferred = $q.defer();
 
 		console.log(baseUrl + params);
