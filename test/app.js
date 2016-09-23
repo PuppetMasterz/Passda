@@ -1,14 +1,6 @@
 var request = require('supertest');
 var app = require('../app.js');
 
-describe('GET /', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/')
-      .expect(200, done);
-  });
-});
-
 describe('GET /login', function() {
   it('should return 200 OK', function(done) {
     request(app)
@@ -33,13 +25,22 @@ describe('GET /api', function() {
   });
 });
 
-describe('GET /contact', function() {
+describe('GET /exam', function() {
   it('should return 200 OK', function(done) {
     request(app)
-      .get('/contact')
+      .get('/exam')
       .expect(200, done);
   });
 });
+
+describe('GET /result/:institute/:exam/:index', function() {
+  it('should return 200 OK', function(done) {
+    request(app)
+      .get('/result/1/1/20')
+      .expect(200, done);
+  });
+});
+
 
 describe('GET /random-url', function() {
   it('should return 404', function(done) {
