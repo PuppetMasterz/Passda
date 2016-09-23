@@ -25,11 +25,29 @@ body {
     width: 100%;
     padding: 0;
     background-color: #fff;
+    height: 100vh;
 }
 
 .huge {
     font-size: 50px;
     line-height: normal;
+}
+
+.create-button{
+    border: 2px dashed white;
+    border-radius: 3px;
+    width: 97%;
+    text-align: center;
+    color: white;
+    padding: 3%;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.create-button:hover{
+    border-color: #bbb;
+    background-color: black;
+    cursor: pointer;
 }
 
 @media(min-width:768px) {

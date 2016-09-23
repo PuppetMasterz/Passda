@@ -12,6 +12,16 @@ angular.module('PassApp', ['ui.router'])
 		url: '/exams',
 		templateUrl: 'html/examination.html',
 		controller: 'MainCtrl'
+	})
+	.state('upload', {
+		url: '/upload',
+		templateUrl: 'html/upload_result.html',
+		controller: 'MainCtrl'
+	})
+	.state('exams.create', {
+		url: '/exam/create',
+		templateUrl: 'html/create_examination.html',
+		controller: 'MainCtrl'
 	});
 })
 .controller('MainCtrl', function($scope, $rootScope, $state, ApiService){
@@ -21,8 +31,28 @@ angular.module('PassApp', ['ui.router'])
 
 	$scope.orgName;
 
+	$rootScope.exam = { title: 'A/L 2016', subtitle: 'GCE Advanced Level Exam' };
+
+	$scope.exams = [{
+			title: 'O/L 2016',
+			subtitle: 'GCE Ordinary Level Exam'
+		},
+		{
+			title: '8 Pass',
+			subtitle: 'Ata Pass Exam'
+		},
+		{
+			title: 'A/L 2016',
+			subtitle: 'GCE Advanced Level Exam'
+		}
+	];
+
 	$scope.createResult = function(){
 		ApiService.postResults(results);
+	}
+
+	$scope.selectExam = function(index){
+		$rootScope.exam = $scope.exams[index];
 	}
 
 	$scope.createExam = function(){
@@ -42,5 +72,9 @@ angular.module('PassApp', ['ui.router'])
 		$rootScope.organization = $scope.orgName;
 		$state.go('exams');
 		console.log($rootScope.organization);
+	}
+
+	$scope.goToUploadResults = function(){
+		$state.go('upload');
 	}
 })

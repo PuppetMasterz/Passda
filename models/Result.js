@@ -16,7 +16,7 @@ o.getFromExamID = function(examID) {
 
 o.getFromIndex = function(ind) {
   return _.find(resultArr, function(item) {
-    return item.index == ind;    
+    return item.index == ind;
   });
 };
 
