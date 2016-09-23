@@ -9,14 +9,14 @@ o.getAll = function() {
 };
 
 o.getFromExamID = function(examID) {
-  _.find(resultArr, function(item) {
-    return item.examID = examID;
+  return _.find(resultArr, function(item) {
+    return item.examID == examID;
   });
 };
 
-o.getFromIndex = function(index) {
-  _.find(resultArr, function(item) {
-    return item.index = index;    
+o.getFromIndex = function(ind) {
+  return _.find(resultArr, function(item) {
+    return item.index == ind;    
   });
 };
 

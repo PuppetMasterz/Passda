@@ -21,8 +21,9 @@ exports.getResult= function(req, res) {
   var exam = req.params.exam;
   var index = req.params.index;
   console.log(institute, exam, index);
+  console.log(Result.getFromIndex(index));
 
-  return Result.getFromIndex(index);
+  return res.json({'status': 200});
 };
 
 /**
