@@ -50,6 +50,11 @@ body {
     cursor: pointer;
 }
 
+.background-white{
+    background-color: #fff;
+    height: 100vh;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 225px;

@@ -48,7 +48,7 @@
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <ul class="nav navbar-nav side-nav">
-                <li> <a class="navbar-brand" href="#">{{ organization }} @ Passda?</a> </li>
+                <li> <a class="navbar-brand text-center" href="#">{{ organization }} @ Passda?</a> </li>
                 <li ng-repeat="exam in exams">
                     <a ng-click="selectExam($index)" ><i class="fa fa-fw fa-file"></i>{{ exam.subtitle }}</a>
                 </li>
@@ -74,7 +74,7 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" ng-click="goToUploadResults()">
                         <div class="panel panel-primary" >
                             <div class="panel-heading" id="upload">
                                 <div class="row block">

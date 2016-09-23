@@ -22,6 +22,11 @@ angular.module('PassApp', ['ui.router'])
 		url: '/exam/create',
 		templateUrl: 'html/create_examination.html',
 		controller: 'MainCtrl'
+	})
+	.state('results', {
+		url: '/results',
+		templateUrl: 'html/result_view.html',
+		controller: 'MainCtrl'
 	});
 })
 .controller('MainCtrl', function($scope, $rootScope, $state, ApiService){
