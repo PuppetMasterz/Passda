@@ -10,7 +10,13 @@ html
     link(rel='shortcut icon', href='/favicon.png')
     link(rel='stylesheet', href='/css/main.css')
 
-  body
+    script(src='/js/lib/jquery-2.2.0.min.js')
+    script(src='/js/lib/bootstrap.min.js')
+    script(src='js/angular.js')
+    script(src='js/angular-ui-router.js')
+    script(src='/js/main.js')
+
+  body(ng-app="PassApp")
     include partials/header
 
     .container
@@ -19,10 +25,6 @@ html
 
     include partials/footer
 
-    script(src='/js/lib/jquery-2.2.0.min.js')
-    script(src='/js/lib/bootstrap.min.js')
-    script(src='/js/main.js')
-    script(src='js/angular.js')
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID
     script.
