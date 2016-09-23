@@ -59,13 +59,38 @@
                 </div>
                 <!-- /.row -->
 
-                <div class="col-md-12">
-                    <div class="col-md-6 offset-md-4">
-                        <h4>Single Upload</h4>
-                        <button type="button" class="btn btn-default">Generate fields</button>
+                    <div class="col-md-12">
+
+                        <div class="col-md-3"></div>
+
+                        <div ng-repeat="result in results" class="form-group">
+                            <label for="index"> Index Number </label>
+                            <input ng-model="results[$index].index" id="index" type="text" class="form-control grade-inputs" disabled>
+
+                            <label for="grade"> Grade </label>
+                            <input ng-model="results[$index].grade" id="grade" type="text" class="form-control grade-inputs" disabled>
+
+                            <label for="sub"> Subject </label>
+                            <input ng-model="results[$index].grade" id="grade" type="text" class="form-control grade-inputs" disabled>
+                        </div>
+
+                         <div class="form-group">
+                            <label for="nindex"> Index Number </label>
+                            <input ng-model="index" id="nindex" type="text" class="form-control grade-inputs">
+
+                            <label for="ngrade"> Grade </label>
+                            <input ng-model="grade" id="ngrade" type="text" class="form-control grade-inputs">
+
+                            <label for="nsub"> Subject </label>
+                            <input ng-model="subject" id="nsub" type="text" class="form-control grade-inputs">
+                        </div>
+
+                        <div class="col-md-3"></div>
+                        <div class="grade-buttons">
+                            <button type="button"ng-click="addResult()" class="btn btn-primary btn-grades">Add Result</button>
+                            <button type="button"ng-click="submitResults()" class="btn btn-primary btn-grades">Submit</button>
+                        </div>
                     </div>
-                </div>
-                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
 

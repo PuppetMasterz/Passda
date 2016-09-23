@@ -44,6 +44,10 @@ body {
     font-size: x-large;
 }
 
+.grade-inputs{
+    display: inline-block;
+}
+
 .create-button:hover{
     border-color: #bbb;
     background-color: black;

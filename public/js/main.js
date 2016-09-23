@@ -36,6 +36,11 @@ angular.module('PassApp', ['ui.router'])
 
 	$scope.orgName;
 
+	$scope.index = "";
+	$scope.grade = "";
+
+	$scope.results = [];
+
 	$rootScope.exam = { title: 'A/L 2016', subtitle: 'GCE Advanced Level Exam' };
 
 	$scope.exams = [{
@@ -82,4 +87,16 @@ angular.module('PassApp', ['ui.router'])
 	$scope.goToUploadResults = function(){
 		$state.go('upload');
 	}
-})
+
+	$scope.addResult = function(){
+		$scope.results.push({ index: $scope.index, grade: $scope.grade, subject: $scope.subject });
+		$scope.index = "";
+		$scope.grade = "";
+		$scope.subject = "";
+	}
+
+	$scope.submitResults = function(){
+		$scope.results = [];
+		ApiService.postResults($scope.results);
+	}
+});
