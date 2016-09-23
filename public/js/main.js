@@ -14,10 +14,12 @@ angular.module('PassApp', ['ui.router'])
 		controller: 'MainCtrl'
 	});
 })
-.controller('MainCtrl', function($scope, ApiService){
+.controller('MainCtrl', function($scope, $rootScope, $state, ApiService){
 	console.log("In main controller...");
 	var results = { data: "Here comes chaos!" };
 	var exam = { data: "Here comes order!" };
+
+	$scope.organization = { name: '' };
 
 	$scope.createResult = function(){
 		ApiService.postResults(results);
@@ -33,5 +35,10 @@ angular.module('PassApp', ['ui.router'])
 		}).catch(function(error){
 			console.log(error);
 		})
+	}
+
+	$scope.createOrganization = function(){
+		$rootScope.organization = $scope.organization;
+		$state.go('exams');
 	}
 })
