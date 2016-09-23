@@ -22,7 +22,7 @@ exports.getResult= function(req, res) {
   var index = req.params.index;
   console.log(institute, exam, index);
 
-  return res.json({'status': 200});
+  return Result.getFromIndex(index);
 };
 
 /**

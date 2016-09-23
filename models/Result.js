@@ -14,6 +14,12 @@ o.getFromExamID = function(examID) {
   });
 };
 
+o.getFromIndex = function(index) {
+  _.find(resultArr, function(item) {
+    return item.index = index;    
+  });
+};
+
 o.saveResult = function(d) {
   resultArr.push(d);
 };
