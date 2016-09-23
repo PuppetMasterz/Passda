@@ -7,7 +7,7 @@ var examSchema = new mongoose.Schema({
         {
             studentId: Number,
             studentName: String,
-            value: Number
+            marks: Number
         }
     ]
 });
