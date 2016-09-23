@@ -35,7 +35,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
             <!-- Brand and toggle get grouped for better mobile display -->
            <!--  <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -57,7 +57,7 @@
                 </li>
             </ul>
             <!-- /.navbar-collapse -->
-        </nav>
+        <!--</nav>-->
 
         <div id="page-wrapper">
 
@@ -140,11 +140,17 @@
                 </div>
                 <span class="close">x</span>
                 <div style="width:100%; margin-top:40px;">
-                    <input readonly type="text" class="form-control" style="width:76%; float:left;">
-                    <button class="btn btn-default" style="float:right;">
-                        Share <i class="fa fa-link" aria-hidden="true"></i>
+                    <input id="link" readonly type="text" class="form-control" style="width:76%; float:left;" value="http://goo.gl/8xz893jd">
+                    <button class="btn btn-default" data-clipboard-target="#link" style="float:right;">
+                        Copy <i class="fa fa-link" aria-hidden="true"></i>
                     </button>
                 </div>
+                <button class="btn btn-default" style="float:left; margin-top:10px; margin-right: 10px;">
+                    Share via Email <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-default" style="float:left; margin-top:10px;">
+                    Share via SMS <i class="fa fa-mobile" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
         <!-- /#page-wrapper -->
@@ -158,8 +164,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
 
+    <script src="../js/clipboard.min.js"></script>
+
     <!--Model box viewer-->
     <script>
+        // Clipboard
+        new Clipboard('.btn');
+
         // Get the modal
         var modal = document.getElementById('myModal');
 

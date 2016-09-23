@@ -8837,7 +8837,7 @@ textarea {
 .popup {
   z-index: 100;
   position: fixed;
-  height: 120px;
+  height: 160px;
   top:30%;
   width: 40%;
   margin-left: 20%;
