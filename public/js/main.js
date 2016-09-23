@@ -1,11 +1,16 @@
 angular.module('PassApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise("/home");
+	$urlRouterProvider.otherwise("/login");
 
 	$stateProvider
-	.state('home', {
-		url: '/home',
-		templateUrl: 'html/home.html',
+	.state('login', {
+		url: '/login',
+		templateUrl: 'html/create_organization.html',
+		controller: 'MainCtrl'
+	})
+	.state('exams', {
+		url: '/exams',
+		templateUrl: 'html/examination.html',
 		controller: 'MainCtrl'
 	});
 })
