@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="PuppetMasterz" content="">
 
-    <title>Create an Examination</title>
+    <title>Upload</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/specific.css">
 
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -174,54 +175,43 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Create an Examination
-                            <!-- <small>Sri Lankan Evaluation Organization</small> -->
+                            Upload
+                            <small>Upload Results</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> Create an Exam
+                                <i class="fa fa-file"></i> Exam_name
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i> Upload
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        
-                        <div class="col-lg-6">
-                            <form role="form">
-                                <div class="form-group">
-                                    <label>Examination Name</label>
-                                    <input class="form-control" placeholder="Enter a Name">
-                                </div>
 
-                            <div class="form-group">
-                                <label>Description about the examination</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
+                <div>
 
-
-                            <div class="form-group">
-                                <label>Head of Examination</label>
-                                <input class="form-control" placeholder="Enter name of the Head">
-                            </div>
-
-                            <button type="submit" class="btn btn-default">Create</button>
-
-                            <button type="reset" class="btn btn-default">Cancel</button>
-
-                            </form>
-                        </div>
-                        
-                    </div>
                     <div class="col-lg-6">
-                            
+                    <h4>Batch Upload</h4>
+                        <form role="role">
+                            <div class="form-group">
+                                <label>File input</label>
+                                <input type="file">
+                                Upload the CSV or spreadsheet Document
+                            </div>
+                        </form>
                     </div>
 
+                    <div class="col-lg-6">
+                    <h4>Single Upload</h4>
+                        <button type="button" class="btn btn-default">Generate fields</button>
+                    </div>
                 </div>
+                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
 
@@ -232,10 +222,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
