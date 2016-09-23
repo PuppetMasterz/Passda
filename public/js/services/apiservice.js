@@ -17,7 +17,22 @@ angular.module('PassApp')
 			console.log(response);
 		}).catch(function(err){
 			console.log("Error on posting results");
-		})
+		});
+	}
+
+	o.getResultById = function(instituteId, examId, indexNo){
+		var params = '/' + instituteId + '/' + examId + '/' + indexNo;
+		var deferred = $q.defer();
+
+		console.log(baseUrl + params);
+		$http.get(baseUrl + params).then(function(response){
+			console.log(response);
+			deferred.resolve({ status: "SUCCESS", data: response.data[0] });
+		}).catch(function(err){
+			deferred.reject({ status: "ERROR", error: err });
+		});
+
+		return deferred.promise;
 	}
 
 	return o;
