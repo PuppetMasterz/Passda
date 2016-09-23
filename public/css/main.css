@@ -8826,4 +8826,36 @@ textarea {
 .fa {
   margin-right: 6px; }
 
+  .block {
+  padding: 20px;
+}
+
+.medium {
+  font-size: 28px;
+}
+
+.popup {
+  z-index: 100;
+  position: fixed;
+  height: 160px;
+  top:30%;
+  width: 40%;
+  margin-left: 20%;
+  background-color: white;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 5s ease-in-out;
+  display: none;
+  overflow: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 /*# sourceMappingURL=main.css.map */
