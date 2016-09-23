@@ -129,6 +129,7 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 app.post('/exam', mainController.createExam);
 app.post('/result', mainController.postResult);
 app.get('/result/:institute/:exam/:index', mainController.getResult);
+app.get('/exam', mainController.getExams);
 
 // app.get('/view/results/:institute/:exam/:index', mainController.viewResults);
 // app.get('/view/institutes', mainController.viewInstitute);

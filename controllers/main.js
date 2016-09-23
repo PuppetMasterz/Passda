@@ -14,6 +14,15 @@ exports.createExam= function(req, res) {
 };
 
 /**
+ * GET /exam
+ */
+exports.getExams = function(req, res) {
+  var institute = req.params.institute;
+
+  return res.json({'status': 200, result: Exam.getAll()});
+};
+
+/**
  * GET /result
  */
 exports.getResult= function(req, res) {
