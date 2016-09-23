@@ -1,17 +1,13 @@
-var mongoose = require('mongoose');
+var ExamArr = [];
 
-var examSchema = new mongoose.Schema({
-    id: { type: Number, unique: true },
-    name: String,
-    results: [
-        {
-            studentId: Number,
-            studentName: String,
-            marks: Number
-        }
-    ]
-});
+var o = {};
 
-var Exam = mongoose.model('Exam', examSchema);
+o.getAll = function() {
+  return ExamArr;
+};
 
-module.exports = Exam;
+o.set = function(d) {
+  ExamArr.push(d);
+};
+
+module.exports = o;
