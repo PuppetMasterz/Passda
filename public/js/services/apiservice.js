@@ -1,11 +1,14 @@
 angular.module('PassApp')
-.factory('ApiService', function($http){
+.factory('ApiService', function($http, $q){
 	var o = {};
 	var baseUrl = "http://localhost:3000";
 
-	o.getResults = function(id){
-		console.log(id);
-		return;
+	o.createExam = function(data){
+		$http.post(baseUrl + '/exam', data).then(function(response){
+			console.log(response);
+		}).catch(function(err){
+			console.log("Error creating exams");
+		});
 	}
 
 	o.postResults = function(data){
