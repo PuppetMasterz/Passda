@@ -5,7 +5,7 @@ angular.module('PassApp', ['ui.router'])
 	$stateProvider
 	.state('home', {
 		url: '/home',
-		templateUrl: 'views/contact',
+		templateUrl: 'views/html/home.html',
 		controller: 'MainCtrl'
 	});
 })
