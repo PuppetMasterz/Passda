@@ -15,16 +15,9 @@ html
     script(src='js/angular.js')
     script(src='js/angular-ui-router.js')
     script(src='/js/main.js')
+    script(src='/js/services/apiservice.js')
 
-  body(ng-app="PassApp")
-    include partials/header
-
-    .container
-      include partials/flash
-      block content
-
-    include partials/footer
-
+    ui-view(ng-app="PassApp")
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID
     script.
