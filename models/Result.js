@@ -22,6 +22,7 @@ o.getFromIndex = function(ind) {
 
 o.saveResult = function(d) {
   resultArr.push(d);
+  console.log(resultArr);
 };
 
 module.exports = o;
