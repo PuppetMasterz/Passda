@@ -9,3 +9,15 @@
 #hold:hover{
 	background-color: #F5AB35;
 }
+
+#resulthead{
+	text-align: center;
+}
+
+#view_res{
+	float: right;
+}
+
+#clear_txt{
+	/*float: right;*/
+}
