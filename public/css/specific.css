@@ -21,3 +21,11 @@
 #clear_txt{
 	/*float: right;*/
 }
+
+#result_header{
+	text-align: center;
+}
+
+#result{
+	text-align: center;
+}
