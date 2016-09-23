@@ -19,7 +19,7 @@ angular.module('PassApp', ['ui.router'])
 	var results = { data: "Here comes chaos!" };
 	var exam = { data: "Here comes order!" };
 
-	$scope.organization = { name: '' };
+	$scope.orgName;
 
 	$scope.createResult = function(){
 		ApiService.postResults(results);
@@ -38,7 +38,9 @@ angular.module('PassApp', ['ui.router'])
 	}
 
 	$scope.createOrganization = function(){
-		$rootScope.organization = $scope.organization;
+		console.log($scope.orgName);
+		$rootScope.organization = $scope.orgName;
 		$state.go('exams');
+		console.log($rootScope.organization);
 	}
 })
