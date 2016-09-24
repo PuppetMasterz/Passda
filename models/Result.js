@@ -15,13 +15,17 @@ o.getFromExamID = function(examID) {
 };
 
 o.getFromIndex = function(ind) {
-  return _.find(resultArr, function(item) {
+  console.log(resultArr);
+  var res = _.filter(resultArr, function(item) {
     return item.index == ind;
   });
+
+  console.log("get from index", res);
+  return res;
 };
 
 o.saveResult = function(d) {
-  resultArr.push(d);
+  resultArr = d;
   console.log(resultArr);
 };
 

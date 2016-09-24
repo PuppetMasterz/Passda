@@ -27,7 +27,7 @@ angular.module('PassApp')
 		console.log(baseUrl + params);
 		$http.get(baseUrl + params).then(function(response){
 			console.log(response);
-			deferred.resolve({ status: "SUCCESS", data: response.data[0] });
+			deferred.resolve({ status: "SUCCESS", data: response.data.result });
 		}).catch(function(err){
 			deferred.reject({ status: "ERROR", error: err });
 		});

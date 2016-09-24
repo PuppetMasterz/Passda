@@ -31,7 +31,7 @@ angular.module('PassApp', ['ui.router'])
 })
 .controller('MainCtrl', function($scope, $rootScope, $state, ApiService){
 	console.log("In main controller...");
-	var results = { data: "Here comes chaos!" };
+	var results = [];
 	var exam = { data: "Here comes order!" };
 
 	$scope.orgName;
@@ -71,8 +71,10 @@ angular.module('PassApp', ['ui.router'])
 	}
 
 	$scope.findResultById = function(){
+		console.log($scope.data);
 		ApiService.getResultById(1, 1, $scope.data.index).then(function(success){
-			console.log(success);
+			$scope.results = success.data;
+
 		}).catch(function(error){
 			console.log(error);
 		})
@@ -97,7 +99,7 @@ angular.module('PassApp', ['ui.router'])
 	}
 
 	$scope.submitResults = function(){
-		$scope.results = [];
 		ApiService.postResults($scope.results);
+		$scope.results = [];
 	}
 });

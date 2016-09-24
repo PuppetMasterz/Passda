@@ -29,7 +29,7 @@ exports.getResult= function(req, res) {
   var institute = req.params.institute;
   var exam = req.params.exam;
   var index = req.params.index;
-  console.log(index);
+  console.log("index backend route", index, Result.getFromIndex(index));
   return res.json({'status': 200, result: Result.getFromIndex(index)});
 };
 

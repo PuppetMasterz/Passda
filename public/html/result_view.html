@@ -50,25 +50,25 @@
                             </div>
                         </div>
                         <br>
-                        <div id="result" class="well">
+                        <div id="result" class="well" ng-if="results.length">
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-3"><p class="form-control-static"><b>Index Number : </b></p></div>
-                                <div class="col-lg-3"><p class="form-control-static">1425451</p></div>  
+                                <div class="col-lg-3"><p class="form-control-static">{{results[0].index}}</p></div>  
                                 <div class="col-lg-3"></div>      
                             </div>
                         </div>
                         
-                        <div class="row">
+                        <div class="row" ng-repeat="res in results">
                             <div class="form-group">
                                 <div class="col-lg-3"></div>
-                                <div class="col-lg-3"><p class="form-control-static"><b>Combined Maths : </b></p></div>
-                                <div class="col-lg-3"><p class="form-control-static">A</p></div>  
+                                <div class="col-lg-3"><p class="form-control-static"><b>{{res.subject}} : </b></p></div>
+                                <div class="col-lg-3"><p class="form-control-static">{{res.grade}}</p></div>  
                                 <div class="col-lg-3"></div>      
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="form-group">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-3"><p class="form-control-static"><b>Physics : </b></p></div>
@@ -83,7 +83,7 @@
                                 <div class="col-lg-3"><p class="form-control-static">B</p></div>  
                                 <div class="col-lg-3"></div>      
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="row">
                             <div class="form-group">
                                 <div class="col-lg-3"></div>
